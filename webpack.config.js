@@ -1,4 +1,5 @@
 const path = require('path');
+var glob_entries = require('webpack-glob-entries')
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 // const CopyPlugin = require('copy-webpack-plugin');
@@ -7,6 +8,15 @@ const mode = process.env.NODE_ENV || 'development';
 const devMode = mode === 'development';
 const target = devMode ? 'web' : 'browserslist';
 const devtool = devMode ? 'source-map' : undefined;
+
+function returnEntries(globPath){
+  let entries = glob_entries(globPath, true);
+  let folderList = new Array();
+  for (let folder in entries){
+     folderList.push(path.join(__dirname, entries[folder]));
+  }
+  return folderList;
+}
 
 module.exports = {
   mode,
@@ -24,22 +34,37 @@ module.exports = {
     filename: '[name].[contenthash].js',
     assetModuleFilename: 'assets/[name][ext]',
   },
+  resolve: {
+    extensions: ['.Webpack.js', '.web.js', '.ts', '.js', '.tsx']
+  },
   plugins: [
     new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, 'src', 'index.html'),
-    }),
+      filename: 'index.html',
+      inject: 'body',
+      template: 'nunjucks-html-loader!./src/templates/index.njk',
+    }), 
     new MiniCssExtractPlugin({
       filename: '[name].[contenthash].css',
     }),
-    // new CopyPlugin({
-    //   patterns: [{ from: 'static', to: './' }],
-    // }),
+
   ],
+
   module: {
     rules: [
       {
-        test: /\.html$/i,
-        loader: 'html-loader',
+        test: /\.html$|njk|nunjucks/,
+        // loader: 'html-loader',
+        use: ['html-loader',{
+          loader: 'nunjucks-html-loader',
+          options : {
+             // Other super important. This will be the base
+             // directory in which webpack is going to find 
+             // the layout and any other file index.njk is calling.
+             searchPaths: [...returnEntries('./src/templates/**/')]
+             // Use the one below if you want to use a single path.
+             // searchPaths: ['./client/templates'],
+          }
+        }]
       },
       {
         test: /\.(c|sa|sc)ss$/i,
