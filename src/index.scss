@@ -1,4 +1,7 @@
 @import '~normalize.css';
-// @import 'style/fonts';
+@import 'style/libs/reset';
 @import 'style/var';
 @import 'style/style';
+@import 'style/_blocks/header';
+@import 'style/_parts/select.scss'
+

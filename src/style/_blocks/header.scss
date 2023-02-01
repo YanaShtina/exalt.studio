@@ -1,0 +1,37 @@
+$b: '.header';
+
+#{$b} {
+  background-color: lightblue;
+
+  &__container {
+    display: flex;
+    align-items: center;
+  }
+
+  &__logo {
+    width: 55px;
+    height: 55px;
+    margin-right: 146px;
+  }
+
+  &__nav-list {
+    display: flex;
+  }
+
+  &__nav-item {
+    text-transform: uppercase;
+    color: #fff;
+    margin-right: 32px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__rigth {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
