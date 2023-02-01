@@ -1,4 +1,4 @@
-// import './index.html';
+// import './templates/index.njk';
 import './index.scss';
 import { mult, sum } from './modules/calc';
 

@@ -1,7 +1,10 @@
 @import '~normalize.css';
-@import 'style/libs/reset';
-@import 'style/var';
+@import 'style/libs/*';
+@import 'style/_var';
+// @import 'style/_scale/*.scss'; 
 @import 'style/style';
-@import 'style/_blocks/header';
-@import 'style/_parts/select.scss'
+@import 'style/_parts/*.scss'; 
+@import 'style/_blocks/*.scss'; 
+
+
 

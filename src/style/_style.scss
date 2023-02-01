@@ -1,5 +1,148 @@
-body {
+@use 'sass:math';
+@import 'scale.scss'; 
 
+$root-font-size: 100;
+$wide-desktop-width: 1600px;
+$desktop-width: 1340px;
+$middle-desktop-width: 1280px;
+$low-desktop-width: 1024px;
+$tablet-width: 768px;
+$mobile-width: 560px;
+
+
+// Remove the unit of a length
+// @param {Number} $number - Number to remove unit from
+// @return {Number} - Unitless number
+@function strip-unit($number) {
+  @if type-of($number) == 'number' and not unitless($number) {
+    @return math.div($number, $number * 0 + 1);
+  }
+
+  @return $number;
+}
+
+$browser-context: $root-font-size;
+
+@function em($pixels, $context: $browser-context) {
+  @return calc(strip-unit($pixels) / strip-unit($context)) * 1em;
+}
+
+@function rem($pixels, $context: $browser-context) {
+  @return calc(strip-unit($pixels) / strip-unit($context)) * 1rem;
+}
+
+
+@mixin wide-desktop-min {
+  @media screen and (min-width: #{$wide-desktop-width}) {
+    @content;
+  }
+}
+
+@mixin wide-desktop {
+  @media screen and (max-width: #{$wide-desktop-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin desktop-min {
+  @media screen and (min-width: #{$desktop-width}) {
+    @content;
+  }
+}
+
+@mixin middle-desktop {
+  @media screen and (max-width: #{$middle-desktop-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin middle-desktop-min {
+  @media screen and (min-width: #{$middle-desktop-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin low-desktop {
+  @media screen and (max-width: #{$desktop-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin low-desktop-only {
+  @media screen and (min-width: #{$low-desktop-width}) and (max-width: #{$desktop-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin low-desktop-min {
+  @media screen and (min-width: #{$low-desktop-width}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media screen and (max-width: #{$low-desktop-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin tablet-only {
+  @media screen and (min-width: #{$tablet-width}) and (max-width: #{$low-desktop-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin tablet-min {
+  @media screen and (min-width: #{$tablet-width}) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media screen and (max-width: #{$tablet-width - 1}) {
+    @content;
+  }
+}
+
+@mixin low-mobile {
+  @media screen and (max-width: #{$mobile-width - 1}) {
+    @content;
+  }
+}
+
+
+html {
+  font-size: #{$root-font-size}px;
+
+  @include low-desktop {
+    $min-screen-width: 415;
+    $mid-screen-width: 1440;
+
+    @include css-lock(#{calc($min-screen-width * $root-font-size / $mid-screen-width)}, $root-font-size, $min-screen-width, $mid-screen-width);
+  }
+
+  @include tablet-only {
+    $mid-screen-width: 768;
+    $max-screen-width: 1023;
+
+    @include css-lock(
+      $root-font-size, #{$root-font-size * calc($max-screen-width / $mid-screen-width)},
+      $mid-screen-width,
+      $max-screen-width
+    );
+  }
+
+  @include mobile {
+    $min-screen-width: 300;
+    $mid-screen-width: 320;
+    $max-screen-width: 414;
+
+    @include css-lock-full(#{calc($min-screen-width * $root-font-size / $mid-screen-width)}, $root-font-size, #{calc($max-screen-width * $root-font-size / $mid-screen-width)}, $min-screen-width, $mid-screen-width, $max-screen-width);
+  }
+}
+
+body {
+  // background-image: url('img/bg-features.jpg');
 }
 
 
