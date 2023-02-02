@@ -1,8 +1,9 @@
 $b: '.header';
 
 #{$b} {
-  background-color: lightgray;
   font-family: 'BebasNeueBold';
+  position: relative;
+  z-index: 10;
 
   &__container {
     display: flex;

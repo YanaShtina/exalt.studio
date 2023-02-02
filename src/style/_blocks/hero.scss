@@ -1,0 +1,39 @@
+$b: '.hero';
+
+#{$b} {
+  position: relative;
+  background-color: lightblue;
+
+  &__slider {
+    width: 100%;
+    height: 100vh;
+    transform: translateY(rem(-80px));
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100vh;
+      object-fit: cover;
+      background: radial-gradient(189.96% 61.18% at 50% 38.82%, rgba(255, 181, 72, 0) 0%, rgba(52, 44, 29, 0.80319) 73.22%, #08090A 99.74%);
+
+    }
+  }
+
+  &__slide {
+    position: relative;
+  }
+
+  &__slide-gradient {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  &__container {
+    position: absolute;
+    top: rem(300px);
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+}
