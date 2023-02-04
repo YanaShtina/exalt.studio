@@ -3,7 +3,7 @@ var glob_entries = require('webpack-glob-entries');
 const GlobImporter = require('node-sass-glob-importer');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-// const CopyPlugin = require('copy-webpack-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
 
 const mode = process.env.NODE_ENV || 'development';
 const devMode = mode === 'development';
@@ -47,7 +47,15 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: '[name].[contenthash].css',
     }),
-
+    new CopyPlugin({
+      patterns: [
+        {
+          from: 'src/img',
+          to: 'assets',
+          noErrorOnMissing: true,
+        },
+      ],
+    }),
   ],
 
   module: {
@@ -104,7 +112,7 @@ module.exports = {
         },
       },
       {
-        test: /\.(jpe?g|png|webp|gif|svg)$/i,
+        test: /\.(jpg|jpg|png|webp|gif|svg)$/i,
         use: devMode
           ? []
           : [

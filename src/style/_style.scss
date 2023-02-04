@@ -54,9 +54,6 @@ a {
 }
 
 body {
-/*   display: flex;
-  flex-direction: column;
-  justify-content: space-between; */
   background-color: #000;
   font-size: rem(18px);
   color: #fff;
@@ -68,5 +65,69 @@ body {
   max-width: rem(1440px);
   margin: 0 auto;
   padding: 0 rem(120px);
+}
+
+.h2 {
+  font-weight: 700;
+  font-size: rem(80px);
+  line-height: rem(80px);
+  text-transform: uppercase;
+  font-family: $s-font-title;
+}
+
+.h3 {
+  font-weight: 700;
+  font-size: rem(24px);
+  line-height: rem(24px);
+  text-transform: uppercase;
+  font-family: $s-font-title;
+}
+
+.txt {
+  font-weight: 400;
+  font-size: rem(18px);
+  line-height: rem(22px);
+  font-family: $s-font-textn;
+}
+
+.btn {
+  background-color: $s-accent;
+  color: $s-text;
+  padding: 0 rem(18px);
+  height: rem(60px);
+  font-family: $s-font-textb;
+  font-weight: 700;
+  font-size: rem(16px);
+  line-height: rem(22px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: rem(4px);
+
+  &--price {
+    span {
+      opacity: 0.5;
+      border: 1px solid #1A1917;
+      height: rem(23px);
+      display: flex;
+      margin: 0 rem(13px);
+    }
+  }
+}
+
+.bg {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
+  top: 0;
+  right: 0;
+
+  img {
+    display: block;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+  }
 }
 

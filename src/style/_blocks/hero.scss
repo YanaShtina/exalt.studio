@@ -2,7 +2,6 @@ $b: '.hero';
 
 #{$b} {
   position: relative;
-  background-color: lightblue;
 
   &__slider {
     width: 100%;
@@ -14,8 +13,6 @@ $b: '.hero';
       width: 100%;
       height: 100vh;
       object-fit: cover;
-      background: radial-gradient(189.96% 61.18% at 50% 38.82%, rgba(255, 181, 72, 0) 0%, rgba(52, 44, 29, 0.80319) 73.22%, #08090A 99.74%);
-
     }
   }
 
@@ -27,13 +24,51 @@ $b: '.hero';
     position: absolute;
     top: 0;
     left: 0;
+    background: radial-gradient(189.96% 61.18% at 50% 38.82%, rgba(255, 181, 72, 0) 0%, rgba(52, 44, 29, 0.80319) 73.22%, #08090A 99.74%);
+    width: 100%;
+    height: 100%;
   }
 
   &__container {
     position: absolute;
-    top: rem(300px);
+    top: rem(240px);
     left: 50%;
     transform: translateX(-50%);
+    font-family: 'BebasNeueBold';
   }
 
+  &__info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: rem(350px);
+  }
+
+  &__title {
+    margin-bottom: rem(8px);
+  }
+
+  &__subtitle {
+    margin-bottom: rem(28px);
+  }
+
+  &__arrow {
+    display: flex;
+    align-self: center;
+    flex-direction: column;
+    align-items: center;
+    font-family: $s-font-textb;
+    font-weight: 700;
+    font-size: rem(12px);
+    line-height: rem(22px);
+    text-transform: uppercase;
+
+    span {
+     margin-bottom: rem(5px);
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
 }

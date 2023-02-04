@@ -1,0 +1,23 @@
+$b: '.features';
+
+
+#{$b} {
+  position: relative;
+  padding-top: rem(165px);
+
+  &__info,
+  &__accordion {
+    max-width: rem(450px);
+    margin-left: auto;
+  }
+
+  &__info {
+    margin-bottom: rem(70px);
+
+    &-subtitle {
+      margin-bottom: rem(10px);
+    }
+  }
+}
+
+
