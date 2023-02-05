@@ -4,6 +4,11 @@ $b: '.features';
 #{$b} {
   position: relative;
   padding-top: rem(165px);
+  padding-bottom: rem(160px);
+
+  &__bg  {
+    transform: translateY(rem(-30px));
+  } 
 
   &__info,
   &__accordion {
