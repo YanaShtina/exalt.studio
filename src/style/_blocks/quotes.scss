@@ -1,0 +1,52 @@
+$b: '.quotes';
+
+#{$b} {
+  position: relative;
+
+  &__bg  {
+    transform: translateY(rem(-70px));
+  } 
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: rem(150px);
+    padding-top: rem(150px);
+  }
+
+  &__left {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__subtitle {
+    margin-bottom: rem(10px);
+  }
+
+  &__title {
+    margin-bottom: rem(50px);
+  }
+
+  &__txt {
+    max-width: rem(435px);
+    margin-bottom: rem(60px);
+  }
+
+  &__right {
+
+  }
+
+  &__quot {
+    margin-bottom: rem(29px);
+    margin-left: auto;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &:nth-child(2n) {
+      margin-right: rem(140px);
+    }
+  }
+}
