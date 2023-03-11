@@ -4,7 +4,10 @@ $b: '.quotes';
   position: relative;
 
   &__bg  {
-    transform: translateY(rem(-70px));
+    background-image: url("../../img/bg-quotes.png");
+    background-repeat: repeat;
+    transform: translateY(rem(-100px));
+    height: 100%;
   } 
 
   &__container {
