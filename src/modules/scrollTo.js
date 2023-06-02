@@ -1,35 +1,22 @@
 export default {
-  handleEvents() {
-    const self = this;
-  
-    $('.js-scroll-to').on('click', function (e) {
-      e.preventDefault();
-      const selector = $(this).attr('data-target');
-      const speed = $(this).attr('data-speed');
-      const offset = $(this).attr('data-offset');
-  
-      self.scrollTo(selector, {
-        speed,
-        offset,
-      });
-    });
-  },
-  
-  scrollTo(selector, { speed = 800, offset = 0 } = {}) {
-    const $target = $(selector);
-    if (!$target.length) return;
-  
-    dispatcher.dispatch({
-      type: 'menu:close',
-    });
-  
-    $([document.documentElement, document.body]).animate({
-      scrollTop: $target.offset().top - offset,
-    }, speed);
+
+  scrollTo(target, { speed = 800, offset = 0 } = {}) {
+    const toTarget = document.querySelector(`.${target}`);
+
+    if (!toTarget) return;
+    console.log('scrollTo', toTarget.offsetTop);
   },
 
   test() {
     const links = document.querySelectorAll('.js-scroll');
-    console.log('links', links);
-  }
+    let self = this;
+    links.forEach((link) => {
+      
+    link.addEventListener('click', function (e) {
+      const target = this.dataset.target;
+      console.log('self', target, this.offsetTop);
+      self.scrollTo(target);
+    })
+    });
+  },
 }
