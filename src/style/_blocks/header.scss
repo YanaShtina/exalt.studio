@@ -1,21 +1,23 @@
 $b: '.header';
 
 #{$b} {
-  font-family: 'BebasNeueBold';
+  font-family: $e-font-semiBold;
   position: relative;
   z-index: 10;
+  background: linear-gradient(270deg, #33615D 0%, #5AA27F 100%);
+  color: #fff;
 
   &__container {
     display: flex;
     align-items: center;
-    padding: rem(10px) rem(120px);
+    justify-content: flex-end;
   }
 
   &__logo {
     display: flex;
     width: rem(56px);
     height: rem(56px);
-    margin-right: rem(166px);
+    margin-right: auto;
   }
 
   &__nav-list {
