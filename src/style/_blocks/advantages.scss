@@ -3,13 +3,12 @@ $b: '.advantages';
 #{$b} {
   &__list {
     display: grid;
+    justify-items: center;
     grid-template-columns: repeat(2, 1fr);
     row-gap: rem(60px);
   }
 
   &__item {
-    // max-width: rem(360px);
-    margin-right: rem(125px);
     position: relative;
     padding-left: rem(100px);
 
@@ -35,7 +34,11 @@ $b: '.advantages';
     }
 
     &-txt {
-     
+      font-family: $e-font-regular;
+      font-weight: 400;
+      font-size: rem(14px);
+      line-height: rem(17px);
+      width: rem(340px);
     }
   }
 }
