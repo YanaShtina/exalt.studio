@@ -6,29 +6,39 @@ $b: '.header';
   z-index: 10;
   background: linear-gradient(270deg, #33615D 0%, #5AA27F 100%);
   color: #fff;
+  height: rem(70px);
 
   &__container {
     display: flex;
     align-items: center;
     justify-content: flex-end;
+    height: 100%;
   }
 
   &__logo {
-    display: flex;
-    width: rem(56px);
-    height: rem(56px);
+    width: rem(150px);
     margin-right: auto;
+    font-family: 'Inter-Bold';
+    font-size: rem(20px);
+
+    span {
+      color: #0a2b1b;
+    }
+
   }
 
-  &__nav-list {
+  &__nav {
     display: flex;
+    margin-right: rem(30px);
+    align-items: center;
+    margin-right: rem(80px);
   }
 
-  &__nav-item {
-    font-size: rem(18px);
-    text-transform: uppercase;
+  &__link {
+    font-family: $e-font-semiBold;
+    font-size: rem(16px);
     color: #fff;
-    margin-right: rem(32px);
+    margin-right: rem(30px);
 
     &:last-child {
       margin-right: 0;
@@ -39,42 +49,23 @@ $b: '.header';
     }
   }
 
-  &__rigth {
-    margin-left: auto;
+  &__left {
     display: flex;
     align-items: center;
-    justify-content: center;
-  }
 
-  &__select {
-    position: relative;
-
-    &::after {
-      content: '';
-      position: absolute;
-      right: rem(-22px);
-      width: 1px;
-      height: 100%;
-      color: #fff;
-      top: 0;
-      background-color: #fff;
-      opacity: 0.5;
+    a {
+      margin-right: rem(25px);
     }
   }
 
-  &__store {
-    margin-left: rem(48px);
-    display: flex;
-  }
-
-  &__store-link {
-    width: rem(30px);
-    height: rem(30px);
-    text-decoration: none;
-    display: flex;
-    
-    &:first-child {
-      margin-right: rem(17px);
-    }
+  &__btn {
+    color: #fff;
+    font-family: $e-font-medium;
+    font-size: rem(140px);
+    height: rem(35px);
+    padding: 0 rem(10px);
+    font-size: rem(14px);
+    border: 1px solid #FFFFFF;
+    border-radius: rem(15px);
   }
 }

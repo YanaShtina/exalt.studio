@@ -56,6 +56,7 @@ a {
 body {
   background-color: #fff;
   font-size: rem(14px);
+  line-height: 120%;
   color: #222;
   height: 100%;
 }
@@ -67,20 +68,38 @@ body {
   padding: 0 rem(162px);
 }
 
-.h2 {
+.h1 {
+  font-family: $e-font-bold;
   font-weight: 700;
-  font-size: rem(80px);
-  line-height: rem(80px);
-  text-transform: uppercase;
-  // font-family: $s-font-title;
+  font-size: rem(58px);
+  line-height: 100%;
+  margin-bottom: rem(30px);
+  color: #fff;
+}
+
+.h2 {
+  font-family: $e-font-semiBold;
+  font-size: rem(32px);
+  margin-bottom: rem(32px);
+  color: #fff;
+  line-height: 120%;
+  margin-bottom: rem(62px);
 }
 
 .h3 {
+  font-family: $e-font-bold;
   font-weight: 700;
-  font-size: rem(24px);
-  line-height: rem(24px);
-  text-transform: uppercase;
-  // font-family: $s-font-title;
+  font-size: rem(32px);
+  line-height: rem(40px);
+  margin-bottom: rem(80px);
+  text-align: center;
+}
+
+.h4
+
+.middle {
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .txt {
@@ -91,44 +110,14 @@ body {
 }
 
 .btn {
-  // background-color: $s-accent;
-  // color: $s-text;
-  padding: 0 rem(18px);
-  height: rem(60px);
-  // font-family: $s-font-textb;
-  font-weight: 700;
-  font-size: rem(16px);
-  line-height: rem(22px);
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: rem(4px);
-  border: none;
 
-  &--price {
-    span {
-      opacity: 0.5;
-      border: 1px solid #1A1917;
-      height: rem(23px);
-      display: flex;
-      margin: 0 rem(13px);
-    }
+  &:hover {
+    cursor: pointer;
   }
 }
 
-.bg {
-  position: absolute;
-  width: 100%;
-  height: 100vh;
-  z-index: -1;
-  top: 0;
-  right: 0;
 
-  img {
-    display: block;
-    width: 100%;
-    height: 100vh;
-    object-fit: cover;
-  }
-}
 

@@ -1,0 +1,51 @@
+$b: '.hero';
+
+#{$b} {
+  position: relative;
+  margin-bottom: rem(100px);
+
+  &__bg {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+  }
+
+  &__container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding-top: rem(185px);
+    padding-bottom: rem(205px);
+  }
+
+  &__left {
+    max-width: rem(560px);
+  }
+
+  &__right {
+    width: rem(435px);
+    height: rem(435px);
+
+    img {
+      object-fit: contain;
+      width: 100%;
+      height: 100%;
+    } 
+  }
+
+  &__btn {
+    color: #fff;
+    background: linear-gradient(270deg, #2A5964 0%, #6DBE7F 96.28%);
+    box-shadow: 0px rem(4px) rem(1px) #1D4033, rem(4px) rem(5px) rem(1px) #1D4033;
+    border-radius: rem(10px);
+    height: rem(50px);
+    padding: 0 rem(33px);
+    font-family: 'MontserratAlternates-SemiBold';
+    font-weight: 600;
+    font-size: rem(16px);
+    line-height: rem(20px);
+  }
+}
