@@ -1,0 +1,104 @@
+$b: '.form';
+
+#{$b} {
+  padding: rem(80px) 0;
+  background-image: url('../../img/footer-bg.png');
+  background-size: cover;
+
+  &__title {
+    width: rem(587px);
+    margin-right: auto;
+    margin-left: auto;
+    color: #fff;
+    margin-bottom: rem(93px);
+    font-family: $e-font-bold;
+    font-size: rem(32px);
+    line-height: rem(39px);
+  }
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  form {
+    background-color: #3D8A65;
+    border-radius: rem(20px);
+    padding: rem(32px) rem(32px) rem(80px) rem(32px);
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__left {
+    &-title {
+      text-shadow: 3px 4px 4px rgba(0, 0, 0, 0.4);
+      color: #fff;
+      font-family: $e-font-bold;
+      font-size: rem(20px);
+      line-height: rem(24px);
+      margin-bottom: rem(60px);
+      width: rem(210px);
+      margin-right: auto;
+      margin-left: auto;
+      text-align: center;
+    }
+
+    &-input {
+      height: rem(52px);
+      background-color: #fff;
+      padding: 0 rem(20px);
+      outline: none;
+      border: none;
+      border-radius: rem(10px);
+      width: rem(350px);
+      margin-bottom: rem(30px);
+
+      &:nth-child(3) {
+        margin-bottom: rem(15px);
+      }
+
+      &::placeholder {
+        font-family: $e-font-regular;
+        font-size: rem(10px);
+        line-height: rem(14px);
+      }
+    }
+
+    &-policy {
+      color: #fff;
+      font-family: $e-font-regular;
+      font-size: rem(10px);
+      line-height: rem(14px);
+      margin-bottom: rem(50px);
+    }
+
+    &-btn {
+      height: rem(52px);
+      border-radius: rem(10px);
+      color: #3D8A65;
+      background-color: #fff;
+      width: rem(300px);
+      font-family: $e-font-bold;
+      font-size: rem(16px);
+      line-height: rem(20px);
+      margin-right: auto;
+      margin-left: auto;
+    }
+  }
+
+  .checkbox {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+    pointer-events: none;
+    visibility: hidden;
+
+    & + label {
+      position: relative;
+      cursor: pointer;
+      background-color: red;
+    }
+  }
+}

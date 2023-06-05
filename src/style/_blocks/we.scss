@@ -1,0 +1,62 @@
+$b: '.we';
+
+#{$b} {
+  background-image: url('../../img/why-we-bg.png');
+  margin-bottom: rem(120px);
+
+  &__container {
+    padding-top: rem(50px);
+    padding-bottom: rem(100px);
+  }
+
+  &__title {
+    font-family: $e-font-bold;
+    font-size: rem(58px);
+    line-height: rem(71px);
+    text-align: center;
+    color: #fff;
+    margin-bottom: rem(90px);
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: rem(25px);
+    color: #fff;
+    text-align: center;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &-icon {
+      width: rem(75px);
+      height: rem(75px);
+      margin-bottom: rem(20px);
+
+      svg {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    &-title {
+      font-family: $e-font-bold;
+      font-size: rem(24px);
+      line-height: rem(29px);
+      margin-bottom: rem(20px);
+    }
+
+    &-txt {
+      font-family: $e-font-regular;
+      font-size: rem(14px);
+      line-height: rem(17px);
+    }
+  }
+}

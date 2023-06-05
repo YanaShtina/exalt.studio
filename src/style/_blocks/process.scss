@@ -1,0 +1,50 @@
+$b: '.process';
+
+#{$b} {
+  margin-bottom: rem(120px);
+
+  &__slide {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: rem(100px);
+    column-gap: rem(40px);
+  }
+
+  &__item {
+    display: flex;
+
+    .number {
+      top: rem(-30px);
+      position: absolute;
+      font-family: $e-font-bold;
+      font-size: rem(60px);
+      line-height: rem(73px);
+      color: #3D8A65;
+      left: rem(10px);
+    }
+
+    &-info {
+      text-align: center;
+      width: 50%;
+      padding: 0 rem(10px);
+      position: relative;
+
+      h5 {
+        font-family: $e-font-bold;
+        font-size: rem(16px);
+        line-height: rem(20px);
+        margin-bottom: rem(20px);
+        max-width: rem(150px);
+        margin-right: auto;
+        margin-left: auto;
+      }
+
+      div {
+        font-family: $e-font-regular;
+        font-size: rem(12px);
+        line-height: rem(15px);
+      }
+    }
+  }
+
+}
