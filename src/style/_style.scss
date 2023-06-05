@@ -95,7 +95,14 @@ body {
   text-align: center;
 }
 
-.h4
+.h4 {
+  font-family: $e-font-bold;
+  font-weight: 700;
+  font-size: rem(20px);
+  line-height: rem(24px);
+  color: #222;
+  width: 100%;
+}
 
 .middle {
   margin-right: auto;

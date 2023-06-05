@@ -1,6 +1,8 @@
 $b: '.advantages';
 
 #{$b} {
+  margin-bottom: rem(120px);
+  
   &__list {
     display: grid;
     justify-items: center;
