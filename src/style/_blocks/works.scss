@@ -13,6 +13,7 @@ $b: '.works';
     flex-direction: column;
     align-items: center;
     overflow: hidden;
+    padding-bottom: rem(50px);
   }
 
   &__item {
@@ -135,7 +136,11 @@ $b: '.works';
       .works__item-bg {
         background: linear-gradient(233.44deg, #6DBE7F 0%, #1BA5D9 100%);
         left: initial;
-        right: rem(-3150px);
+        right: rem(-350px);
+
+        @include tablet {
+          right: rem(-30px);
+        }
       }
     }
   }

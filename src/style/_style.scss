@@ -1,7 +1,7 @@
 @use 'sass:math';
 @import 'scale/scale.scss'; 
-@import 'scale/breakpoints.scss'; 
 @import 'scale/settings.scss'; 
+@import 'scale/breakpoints.scss'; 
 
 $root-font-size: 100;
 $wide-desktop-width: 1920px;
@@ -14,14 +14,7 @@ $mobile-width: 360px;
 html {
   font-size: #{$root-font-size}px;
 
-  @include low-desktop {
-    $min-screen-width: 415;
-    $mid-screen-width: 1440;
-
-    @include css-lock(#{calc($min-screen-width * $root-font-size / $mid-screen-width)}, $root-font-size, $min-screen-width, $mid-screen-width);
-  }
-
-  @include tablet-only {
+  @include tablet {
     $mid-screen-width: 768;
     $max-screen-width: 1023;
 
@@ -34,11 +27,15 @@ html {
 
   @include mobile {
     $min-screen-width: 300;
-    $mid-screen-width: 320;
-    $max-screen-width: 414;
+    $mid-screen-width: 360;
+    $max-screen-width: 767;
 
     @include css-lock-full(#{calc($min-screen-width * $root-font-size / $mid-screen-width)}, $root-font-size, #{calc($max-screen-width * $root-font-size / $mid-screen-width)}, $min-screen-width, $mid-screen-width, $max-screen-width);
   }
+}
+
+main, header, footer {
+  overflow: hidden;
 }
 
 svg {
@@ -71,6 +68,11 @@ body {
     padding: 0 rem(40px);
     max-width: rem(1023px);
   }
+
+  @include mobile {
+    padding: 0 rem(15px);
+    max-width: rem(767px);
+  }
 }
 
 .h1 {
@@ -83,6 +85,10 @@ body {
 
   @include tablet {
     font-size: rem(44px);
+  }
+
+  @include mobile {
+    font-size: rem(32px);
   }
 }
 
@@ -97,6 +103,11 @@ body {
   @include tablet {
     font-size: rem(28px);
     margin-bottom: rem(162px);
+  }
+
+  @include mobile {
+    font-size: rem(26px);
+    margin-bottom: rem(182px);
   }
 }
 

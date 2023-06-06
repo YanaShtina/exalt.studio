@@ -26,9 +26,13 @@ $b: '.hero';
     padding-bottom: rem(205px);
 
     @include tablet {
-      font-size: rem(44px);
       padding-top: rem(70px);
       padding-bottom: rem(100px);
+    }
+
+    @include mobile {
+      padding-top: rem(70px);
+      padding-bottom: rem(70px);
     }
   }
 
@@ -48,6 +52,13 @@ $b: '.hero';
       position: absolute;
       right: rem(40px);
       top: rem(140px);
+    }
+
+    @include mobile {
+      width: rem(235px);
+      height: rem(235px);
+      right: rem(10px);
+      top: rem(240px);
     }
 
     img {
