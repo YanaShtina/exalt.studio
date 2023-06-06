@@ -4,12 +4,12 @@
 @import 'scale/settings.scss'; 
 
 $root-font-size: 100;
-$wide-desktop-width: 1440px;
-$desktop-width: 1340px;
-$middle-desktop-width: 1280px;
+$wide-desktop-width: 1920px;
+$desktop-width: 1440px;
+/* $middle-desktop-width: 1280px; */
 $low-desktop-width: 1024px;
 $tablet-width: 768px;
-$mobile-width: 560px;
+$mobile-width: 360px;
 
 html {
   font-size: #{$root-font-size}px;
@@ -66,6 +66,11 @@ body {
   max-width: rem(1440px);
   margin: 0 auto;
   padding: 0 rem(162px);
+
+  @include tablet {
+    padding: 0 rem(40px);
+    max-width: rem(1023px);
+  }
 }
 
 .h1 {
@@ -75,6 +80,10 @@ body {
   line-height: 100%;
   margin-bottom: rem(30px);
   color: #fff;
+
+  @include tablet {
+    font-size: rem(44px);
+  }
 }
 
 .h2 {
@@ -84,6 +93,11 @@ body {
   color: #fff;
   line-height: 120%;
   margin-bottom: rem(62px);
+
+  @include tablet {
+    font-size: rem(28px);
+    margin-bottom: rem(162px);
+  }
 }
 
 .h3 {
@@ -93,6 +107,10 @@ body {
   line-height: rem(40px);
   margin-bottom: rem(80px);
   text-align: center;
+
+  @include tablet {
+    margin-bottom: rem(60px);
+  }
 }
 
 .h4 {

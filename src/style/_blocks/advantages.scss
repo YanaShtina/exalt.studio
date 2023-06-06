@@ -8,11 +8,20 @@ $b: '.advantages';
     justify-items: center;
     grid-template-columns: repeat(2, 1fr);
     row-gap: rem(60px);
+
+    @include tablet {
+      grid-template-columns: repeat(1, 1fr);
+      row-gap: rem(40px);
+    }
   }
 
   &__item {
     position: relative;
     padding-left: rem(100px);
+
+    @include tablet {
+      padding-left: rem(100px);
+    }
 
     &:last-child {
       margin-right: 0;
@@ -23,6 +32,11 @@ $b: '.advantages';
       height: rem(65px);
       left: 0;
       position: absolute;
+
+      @include tablet {
+        width: rem(45px);
+        height: rem(45px);
+      }
     }
 
     &-title {
@@ -33,6 +47,11 @@ $b: '.advantages';
       color: #222;
       width: 100%;
       margin-bottom: rem(15px);
+
+      @include tablet {
+        font-size: rem(20px);
+        line-height: rem(24px);
+      }
     }
 
     &-txt {

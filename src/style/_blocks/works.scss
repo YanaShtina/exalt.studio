@@ -4,6 +4,10 @@ $b: '.works';
   margin-bottom: rem(180px);
   position: relative;
 
+  @include tablet {
+    margin-bottom: rem(30px);
+  }
+
   &__list {
     display: flex;
     flex-direction: column;
@@ -17,6 +21,11 @@ $b: '.works';
     position: relative;
     margin-bottom: rem(130px);
 
+    @include tablet {
+      margin-bottom: rem(30px);
+      align-items: flex-start;
+    }
+
     &:last-child {
       margin-bottom: 0;
     }
@@ -25,17 +34,27 @@ $b: '.works';
       width: 50%;
       width: rem(600px);
       height: rem(355px);
-      object-fit: contain;
-
+    
       img {
         width: 100%;
         height: 100%;
+        object-fit: contain;
+      }
+
+      @include tablet {
+        margin-bottom: rem(60px);
+        width: rem(500px);
+        height: rem(250px);
       }
     }
 
     &-title {
       margin-bottom: rem(30px);
       max-width: rem(260px);
+
+      @include tablet {
+        margin-bottom: rem(20px);
+      }
     }
 
     &-txt {
@@ -44,6 +63,11 @@ $b: '.works';
       line-height: rem(17px);
       margin-bottom: rem(60px);
       max-width: rem(470px);
+
+      @include tablet {
+        margin-bottom: rem(30px);
+        max-width: rem(370px);
+      }
     }
 
     &-link {
@@ -54,6 +78,11 @@ $b: '.works';
       border-radius: rem(10px);
       height: rem(47px);
       max-width: rem(205px);
+
+      @include tablet {
+        font-size: rem(14px);
+        height: rem(40px);
+      }
     }
 
     &-bg {
@@ -64,15 +93,31 @@ $b: '.works';
       border-radius: rem(15px);
       z-index: -1;
       top: rem(50px);
+
+      @include tablet {
+        height: rem(230px);
+        width: rem(400px);
+        top: rem(30px);
+      }
     }
 
     &._left {
       .works__item-info {
         margin-left: rem(92px);
+        padding-right: rem(50px);
+
+        @include tablet {
+          margin-left: rem(20px);
+          padding-right: rem(30px);
+        }
       }
 
       .works__item-bg {
         left: rem(-340px);
+
+        @include tablet {
+          left: rem(-10px);
+        }
       }
     }
 
@@ -80,12 +125,17 @@ $b: '.works';
       .works__item-info {
         padding-left: rem(50px);
         margin-right: rem(92px);
+
+        @include tablet {
+          padding-left: rem(30px);
+          margin-right: rem(20px);
+        }
       }
 
       .works__item-bg {
         background: linear-gradient(233.44deg, #6DBE7F 0%, #1BA5D9 100%);
         left: initial;
-        right: rem(-360px);
+        right: rem(-3150px);
       }
     }
   }

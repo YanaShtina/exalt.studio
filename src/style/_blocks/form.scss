@@ -45,6 +45,9 @@ $b: '.form';
     }
 
     &-input {
+      font-family: $e-font-regular;
+      font-size: rem(14px);
+      line-height: rem(14px);
       height: rem(52px);
       background-color: #fff;
       padding: 0 rem(20px);
@@ -87,6 +90,11 @@ $b: '.form';
     }
   }
 
+  label {
+    display: flex;
+    align-items: center;
+  }
+
   .checkbox {
     position: absolute;
     opacity: 0;
@@ -98,7 +106,36 @@ $b: '.form';
     & + label {
       position: relative;
       cursor: pointer;
-      background-color: red;
+    }
+
+    & + label:before {
+      content: '';
+      margin-right: rem(8px);
+      display: inline-block;
+      vertical-align: text-top;
+      width: rem(15px);
+      height: rem(15px);
+      // background: white;
+      border: 1px solid #fff;
+      border-radius: rem(4px);
+    }
+
+    &:checked + label:after {
+      content: '';
+      position: absolute;
+      left: rem(4px);
+      top: rem(7px);
+      background: white;
+      width: rem(2px);
+      height: rem(2px);
+      box-shadow: 
+        2px 0 0 white,
+        4px 0 0 white,
+        4px -2px 0 white,
+        4px -4px 0 white,
+        4px -6px 0 white,
+        4px -8px 0 white;
+      transform: rotate(45deg);
     }
   }
 }

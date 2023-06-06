@@ -5,6 +5,10 @@ $b: '.hero';
   margin-bottom: rem(100px);
   background-color: #1D4033;
 
+  @include tablet {
+    margin-bottom: rem(50px);
+  }
+
   &__bg {
     position: absolute;
     top: 0;
@@ -20,15 +24,31 @@ $b: '.hero';
     justify-content: flex-start;
     padding-top: rem(185px);
     padding-bottom: rem(205px);
+
+    @include tablet {
+      font-size: rem(44px);
+      padding-top: rem(70px);
+      padding-bottom: rem(100px);
+    }
   }
 
   &__left {
     max-width: rem(560px);
+    position: relative;
+    z-index: 5;
   }
 
   &__right {
     width: rem(435px);
     height: rem(435px);
+
+    @include tablet {
+      width: rem(335px);
+      height: rem(335px);
+      position: absolute;
+      right: rem(40px);
+      top: rem(140px);
+    }
 
     img {
       object-fit: contain;

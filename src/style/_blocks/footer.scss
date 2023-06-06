@@ -1,63 +1,52 @@
 $b: '.footer';
 
 #{$b} {
-  font-family: 'BebasNeueBold';
+  font-family: $e-font-semiBold;
   font-weight: rem(12px);
   line-height: rem(16px);
+  background: linear-gradient(270deg, #33615D 0%, #5AA27F 100%);
+  color: #fff;
 
   &__container {
-    padding-bottom: rem(47px);
-  }
-
-  &__nav-wrap {
+    padding-top: rem(10px);
+    padding-bottom: rem(10px);
     display: flex;
-    align-items: center;
-    padding-bottom: rem(30px);
-    border-bottom: 1px solid rgba(100%, 100%, 100%, 0.5);
-  }
-
-  &__social {
-    display: flex;
-    align-items: center;
-    margin-left: auto;
-  }
-
-  &__social-link {
-    margin-right: rem(55px);
-
-    &:last-child {
-      margin-right: 0;
-    }
-  }
-
-  &__copyrigth {
-    display: flex;
-    padding-top: rem(30px);
     align-items: center;
     justify-content: space-between;
   }
 
-  &__copyrigth-links {
+  &__left {
     display: flex;
     align-items: center;
 
-    a {
-      margin-right: rem(17px);
-      color: #fff;
-      position: relative;
+    img {
+      width: rem(90px);
+      height: rem(90px);
+      margin-right: rem(30px);
+    }
 
-      &::after {
-        content: '';
-        position: absolute;
-        width: 1px;
-        height: 100%;
-        bottom: 0;
-        right: rem(-8.5px);
-        background-color: #fff;
+    &-info {
+      display: flex;
+      flex-direction: column;
+
+      span {
+        &:first-child {
+          margin-bottom: rem(10px);
+        }
       }
+    }
+  }
 
-      &:last-child {
-        margin-right: 0;
+  &__right {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    align-items: flex-end;
+
+    a {
+      text-align: right;
+      &:first-child {
+        margin-bottom: rem(10px);
       }
     }
   }
