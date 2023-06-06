@@ -3,10 +3,18 @@ $b: '.process';
 #{$b} {
   margin-bottom: rem(120px);
 
+  @include mobile {
+    margin-bottom: rem(80px);
+  }
+
   &__container {
     @include tablet {
       padding: 0 rem(60px);
     }
+  }
+
+  &__title {
+    margin-bottom: rem(80px) !important;
   }
 
   &__slide {
@@ -41,15 +49,33 @@ $b: '.process';
       align-items: center;
     }
 
+    @include mobile {
+      flex-direction: column;
+      margin-bottom: rem(50px);
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+
     &:nth-child(even) {
       img {
         order: -1;
+
+        @include mobile {
+          order: -1;
+        }
       }
     }
 
     &:nth-child(odd) {
       img {
         order: 5;
+
+        @include mobile {
+          order: -1;
+        }
       }
     }
 
@@ -68,6 +94,11 @@ $b: '.process';
         left: rem(30px);
         top: rem(-50px);
       }
+
+      @include mobile {
+        top: rem(-240px);
+        left: rem(20px);
+      }
     }
 
     &-info {
@@ -80,6 +111,10 @@ $b: '.process';
         padding: 0 rem(20px);
       }
 
+      @include mobile {
+        width: 100%;
+      }
+
       h5 {
         font-family: $e-font-bold;
         font-size: rem(16px);
@@ -88,12 +123,25 @@ $b: '.process';
         max-width: rem(150px);
         margin-right: auto;
         margin-left: auto;
+
+        @include mobile {
+          max-width: 90%;
+        }
       }
 
       div {
         font-family: $e-font-regular;
         font-size: rem(12px);
         line-height: rem(15px);
+      }
+    }
+
+    img {
+      @include mobile {
+        width: 100%;
+        max-height: rem(160px);
+        object-fit: cover;
+        margin-bottom: rem(15px);
       }
     }
   }
@@ -129,6 +177,12 @@ $b: '.process';
 
     @include tablet {
       display: block;
+    }
+
+    @include mobile {
+      font-size: rem(22px);
+      line-height: rem(24px);
+      margin-top: rem(40px);
     }
   }
 }

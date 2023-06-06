@@ -11,6 +11,11 @@ $b: '.numbers';
     padding: rem(110px) 0;
   }
 
+  @include mobile {
+    margin-bottom: 0;
+    padding: rem(145px) 0;
+  }
+
   &__bg {
     position: absolute;
     background-image: url('../../img/numbers.svg');
@@ -21,6 +26,10 @@ $b: '.numbers';
     width: 100%;
     height: 100%;
     z-index: -1;
+
+    @include mobile {
+      background-image: url('../../img/we-numbers.svg');
+    }
   }
 
   &__title {
@@ -35,6 +44,12 @@ $b: '.numbers';
       line-height: rem(61px);
       margin-bottom: rem(60px);
     }
+
+    @include mobile {
+      font-size: rem(48px);
+      line-height: rem(52px);
+      margin-bottom: rem(40px);
+    }
   }
 
   &__list {
@@ -44,6 +59,11 @@ $b: '.numbers';
 
     @include tablet {
       align-items: flex-start;
+    }
+
+    @include mobile {
+      flex-direction: column;
+      align-items: center;
     }
   }
 
@@ -57,6 +77,11 @@ $b: '.numbers';
       min-width: rem(235px);
     }
 
+    @include mobile {
+      margin-bottom: rem(30px);
+      min-width: rem(300px);
+    }
+
     &-number {
       font-family: $e-font-bold;
       font-size: rem(80px);
@@ -65,6 +90,11 @@ $b: '.numbers';
 
       @include tablet {
         font-size: rem(72px);
+      }
+
+      @include mobile {
+        font-size: rem(58px);
+        margin-bottom: 0;
       }
     }
 
