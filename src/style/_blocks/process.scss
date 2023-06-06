@@ -3,15 +3,55 @@ $b: '.process';
 #{$b} {
   margin-bottom: rem(120px);
 
+  &__container {
+    @include tablet {
+      padding: 0 rem(60px);
+    }
+  }
+
   &__slide {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     row-gap: rem(100px);
     column-gap: rem(40px);
+
+    @include tablet {
+      grid-template-columns: repeat(1, 1fr);
+      row-gap: rem(40px);
+      column-gap: 0;
+    }
+
+    &.hidden {
+      opacity: 0;
+      height: 0;
+      width: 0;
+      visibility: hidden;
+      pointer-events: none;
+      position: absolute;
+      z-index: -10;
+      overflow: hidden;
+    }
   }
 
   &__item {
     display: flex;
+
+    @include tablet {
+      justify-content: center;
+      align-items: center;
+    }
+
+    &:nth-child(even) {
+      img {
+        order: -1;
+      }
+    }
+
+    &:nth-child(odd) {
+      img {
+        order: 5;
+      }
+    }
 
     .number {
       top: rem(-30px);
@@ -21,6 +61,13 @@ $b: '.process';
       line-height: rem(73px);
       color: #3D8A65;
       left: rem(10px);
+
+      @include tablet {
+        font-size: rem(55px);
+        line-height: rem(66px);
+        left: rem(30px);
+        top: rem(-50px);
+      }
     }
 
     &-info {
@@ -28,6 +75,10 @@ $b: '.process';
       width: 50%;
       padding: 0 rem(10px);
       position: relative;
+
+      @include tablet {
+        padding: 0 rem(20px);
+      }
 
       h5 {
         font-family: $e-font-bold;
@@ -47,4 +98,37 @@ $b: '.process';
     }
   }
 
+  .more {
+    font-family: $e-font-bold;
+    font-size: rem(24px);
+    line-height: rem(29px);
+    color: #4D4D4D;
+    margin-top: rem(60px);
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    display: none;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: rem(-30px);
+      left: 50%;
+      width: rem(38px);
+      height: rem(16px);
+      background-image: url('../../img/arrow-down-2.svg');
+      background-size: contain;
+      background-repeat: no-repeat;
+      transform: translateX(-50%);
+    }
+
+    @include tablet {
+      display: block;
+    }
+  }
 }

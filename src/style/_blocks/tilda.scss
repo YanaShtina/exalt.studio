@@ -2,13 +2,26 @@ $b: '.tilda';
 
 #{$b} {
   margin-bottom: rem(135px);
+
+  @include tablet {
+    margin-bottom: rem(85px);
+  }
+
   &__container {
     padding: 0 rem(219px);
+
+    @include tablet {
+      padding: 0 rem(40px);
+    }
   }
 
   &__list {
     display: flex;
     justify-content: center;
+
+    @include tablet {
+     flex-direction: column;
+    }
   }
 
   &__item {
@@ -26,9 +39,24 @@ $b: '.tilda';
     justify-content: center;
     position: relative;
 
+    @include tablet {
+      margin-right: auto;
+      margin-left: auto;
+      width: rem(450px);
+      height: rem(450px);
+      padding: 0 rem(20px);
+      margin-bottom: rem(100px);
+      align-items: center;
+     }
+
 
     &:last-child {
       margin-right: 0;
+
+      @include tablet {
+        margin-bottom: 0;
+        margin-right: auto;
+       }
     }
 
     &-title {
@@ -44,6 +72,21 @@ $b: '.tilda';
       font-family: $e-font-regular;
       font-size: rem(14px);
       line-height: rem(17px);
+
+
+    @include tablet {
+      text-align: center;
+      width: 80%;
+     }
+    }
+
+    &-row {
+      @include tablet {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        width: 80%;
+       }
     }
 
     &-est {
@@ -63,6 +106,10 @@ $b: '.tilda';
       font-size: rem(22px);
       line-height: rem(27px);
       margin-top: rem(15px);
+
+      @include tablet {
+        margin-top: 0;
+       }
     }
 
     &-btn {
@@ -76,6 +123,10 @@ $b: '.tilda';
       height: rem(45px);
       width: 100%;
       margin-top: rem(45px);
+
+      @include tablet {
+        width: 80%;
+       }
     }
 
     &-icon {

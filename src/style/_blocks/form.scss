@@ -5,6 +5,11 @@ $b: '.form';
   background-image: url('../../img/footer-bg.png');
   background-size: cover;
 
+  @include tablet {
+    overflow: hidden;
+    padding: rem(60px) 0;
+  }
+
   &__title {
     width: rem(587px);
     margin-right: auto;
@@ -14,12 +19,24 @@ $b: '.form';
     font-family: $e-font-bold;
     font-size: rem(32px);
     line-height: rem(39px);
+
+    @include tablet {
+      font-size: rem(28px);
+      line-height: rem(32px);
+      margin-bottom: rem(50px);
+    }
   }
 
   &__container {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
+
+    @include tablet {
+      justify-content: center;
+      padding-bottom: rem(100px);
+    }
   }
 
   form {
@@ -28,9 +45,25 @@ $b: '.form';
     padding: rem(32px) rem(32px) rem(80px) rem(32px);
     display: flex;
     flex-direction: column;
+
+    @include tablet {
+      padding: rem(24px) rem(24px) rem(50px) rem(24px);
+    }
+  }
+
+  &__right {
+    @include tablet {
+      position: absolute;
+      right: 0;
+      bottom: rem(-50px);
+      width: rem(350px);
+      height: rem(350px);
+    }
   }
 
   &__left {
+    position: relative;
+    z-index: 5;
     &-title {
       text-shadow: 3px 4px 4px rgba(0, 0, 0, 0.4);
       color: #fff;
