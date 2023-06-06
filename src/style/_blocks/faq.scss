@@ -2,11 +2,22 @@ $b: '.faq';
 
 #{$b} {
   margin-bottom: rem(120px);
+
+  @include mobile {
+    margin-bottom: rem(80px);
+  }
   
   &__title {
     width: rem(360px);
     margin-right: auto;
     margin-left: auto;
+
+    @include mobile {
+      width: 100%;
+      margin-bottom: rem(40px);
+      font-size: rem(32px);
+      line-height: rem(48px);
+    }
   }
 
   &__item {
@@ -22,6 +33,12 @@ $b: '.faq';
       background-image: url('../../img/arrow-down.svg');
       background-size: contain;
       background-repeat: no-repeat;
+
+      @include mobile {
+        width: rem(22px);
+        height: rem(12px);
+        top: rem(23px);
+      }
     }
 
     &-question {
@@ -31,6 +48,13 @@ $b: '.faq';
       line-height: rem(24px);
       color: #3D3D3D;
       border-bottom: 1px solid #989898;
+
+      @include mobile {
+        font-family: $e-font-medium;
+        padding: rem(15px) 0;
+        font-size: rem(16px);
+        line-height: rem(22px);
+      }
     }
 
     &-answer {

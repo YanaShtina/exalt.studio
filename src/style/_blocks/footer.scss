@@ -2,10 +2,15 @@ $b: '.footer';
 
 #{$b} {
   font-family: $e-font-semiBold;
-  font-weight: rem(12px);
+  font-size: rem(12px);
   line-height: rem(16px);
   background: linear-gradient(270deg, #33615D 0%, #5AA27F 100%);
   color: #fff;
+
+  @include mobile {
+    font-size: rem(10px);
+    line-height: rem(13px);
+  }
 
   &__container {
     padding-top: rem(10px);
@@ -13,16 +18,34 @@ $b: '.footer';
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    @include mobile {
+      padding-top: rem(10px);
+      padding-bottom: rem(10px);
+      align-items: flex-end;
+    }
   }
 
   &__left {
     display: flex;
     align-items: center;
 
+
+    @include mobile {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
     img {
       width: rem(90px);
       height: rem(90px);
       margin-right: rem(30px);
+
+      @include mobile {
+        width: rem(50px);
+        height: rem(50px);
+        margin-right: 0;
+      }
     }
 
     &-info {
@@ -32,6 +55,10 @@ $b: '.footer';
       span {
         &:first-child {
           margin-bottom: rem(10px);
+
+          @include mobile {
+            margin-bottom: 0;
+          }
         }
       }
     }
@@ -47,6 +74,10 @@ $b: '.footer';
       text-align: right;
       &:first-child {
         margin-bottom: rem(10px);
+
+        @include mobile {
+          margin-bottom: rem(5px);
+        }
       }
     }
   }

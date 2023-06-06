@@ -8,11 +8,19 @@ $b: '.we';
     margin-bottom: rem(80px);
   }
 
+  @include mobile {
+    background-size: cover;
+  }
+
   &__container {
     padding-top: rem(50px);
     padding-bottom: rem(100px);
 
     @include tablet {
+      padding-top: rem(30px);
+    }
+
+    @include mobile {
       padding-top: rem(30px);
     }
   }
@@ -29,6 +37,12 @@ $b: '.we';
       margin-bottom: rem(80px);
       font-size: rem(48px);
       line-height: rem(58px);
+    }
+
+    @include mobile {
+      margin-bottom: rem(50px);
+      font-size: rem(42px);
+      line-height: rem(54px);
     }
   }
 
@@ -53,6 +67,11 @@ $b: '.we';
       margin-right: 0;
       width: 50%;
       margin-bottom: rem(60px);
+    }
+
+    @include mobile {
+       width: 100%;
+       margin-bottom: rem(40px);
     }
 
     &:last-child {

@@ -25,6 +25,13 @@ $b: '.form';
       line-height: rem(32px);
       margin-bottom: rem(50px);
     }
+
+    @include tablet {
+      width: 90%;
+      font-size: rem(22px);
+      line-height: rem(28px);
+      margin-bottom: rem(30px);
+    }
   }
 
   &__container {
@@ -49,6 +56,10 @@ $b: '.form';
     @include tablet {
       padding: rem(24px) rem(24px) rem(50px) rem(24px);
     }
+
+    @include mobile {
+      // width: 100%;
+    }
   }
 
   &__right {
@@ -64,6 +75,11 @@ $b: '.form';
   &__left {
     position: relative;
     z-index: 5;
+
+    @include mobile {
+      width: 100%;
+    }
+
     &-title {
       text-shadow: 3px 4px 4px rgba(0, 0, 0, 0.4);
       color: #fff;
@@ -75,6 +91,10 @@ $b: '.form';
       margin-right: auto;
       margin-left: auto;
       text-align: center;
+
+      @include mobile {
+        margin-bottom: rem(30px);
+      }
     }
 
     &-input {
@@ -90,8 +110,19 @@ $b: '.form';
       width: rem(350px);
       margin-bottom: rem(30px);
 
+      @include mobile {
+        width: 95%;
+        padding-right: 0;
+        padding-left: rem(15px);
+        margin-bottom: rem(15px);
+      }
+
       &:nth-child(3) {
         margin-bottom: rem(15px);
+
+        @include mobile {
+          margin-bottom: rem(10px);
+        }
       }
 
       &::placeholder {
@@ -107,6 +138,10 @@ $b: '.form';
       font-size: rem(10px);
       line-height: rem(14px);
       margin-bottom: rem(50px);
+
+      @include mobile {
+        margin-bottom: rem(25px);
+      }
     }
 
     &-btn {
@@ -120,6 +155,10 @@ $b: '.form';
       line-height: rem(20px);
       margin-right: auto;
       margin-left: auto;
+
+      @include mobile {
+        width: 100%;
+      }
     }
   }
 
