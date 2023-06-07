@@ -12,7 +12,7 @@ $b: '.tilda';
   }
 
   &__container {
-    padding: 0 rem(219px);
+    // padding: 0 rem(160px);
 
     @include tablet {
       padding: 0 rem(40px);
@@ -70,8 +70,12 @@ $b: '.tilda';
     justify-content: center;
     position: relative;
 
+    @media(max-width: 1325px) {
+      margin-right: rem(25px);
+    }
+
     @include tablet {
-      margin-right: auto;
+      margin-right: auto !important;
       margin-left: auto;
       width: rem(450px);
       height: rem(450px);

@@ -24,8 +24,6 @@ export default {
           const elementPosition = scrollTarget.getBoundingClientRect().top;
           const offsetPosition = elementPosition - topOffset;
 
-          console.log('target', isMobile);
-
           window.scrollBy({
               top: offsetPosition,
               behavior: 'smooth'

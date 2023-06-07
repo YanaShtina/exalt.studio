@@ -155,9 +155,17 @@ $b: '.form';
       line-height: rem(20px);
       margin-right: auto;
       margin-left: auto;
+      opacity: 1;
+      transition: opacity 0.3s ease-in-out;
 
       @include mobile {
         width: 100%;
+      }
+
+      &:hover {
+        cursor: pointer;
+        opacity: 0.8;
+        transition: opacity 0.3s ease-in-out;
       }
     }
   }

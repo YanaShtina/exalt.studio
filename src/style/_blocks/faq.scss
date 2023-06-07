@@ -23,6 +23,25 @@ $b: '.faq';
   &__item {
     position: relative;
 
+    &.active {
+      .faq__item-answer {
+        height: max-content;
+        overflow: initial;
+        opacity: 1;
+        visibility: visible;
+        pointer-events: all;
+        position: relative;
+        margin-top: 0;
+        transition: margin-top 0.4s ease-in-out;
+        
+      }
+
+      &::before {
+        transform: rotate(0);
+        transition: transform 0.3s ease-in-out;
+      }
+    }
+
     &::before {
       content: '';
       position: absolute;
@@ -33,12 +52,16 @@ $b: '.faq';
       background-image: url('../../img/arrow-down.svg');
       background-size: contain;
       background-repeat: no-repeat;
+      transform: rotate(-90deg);
+      transition: transform 0.3s ease-in-out;
 
       @include mobile {
         width: rem(22px);
         height: rem(12px);
         top: rem(23px);
       }
+
+  
     }
 
     &-question {
@@ -48,6 +71,10 @@ $b: '.faq';
       line-height: rem(24px);
       color: #3D3D3D;
       border-bottom: 1px solid #989898;
+
+      &:hover {
+        cursor: pointer;
+      }
 
       @include mobile {
         font-family: $e-font-medium;
@@ -63,6 +90,14 @@ $b: '.faq';
       line-height: rem(17px);
       padding: rem(20px) 0;
       border-bottom: 1px solid #989898;
+      height: 0;
+      overflow: hidden;
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+      position: absolute;
+      margin-top: rem(-10px);
+      transition: margin-top 0.4s ease-in-out;
     }
   }
 }

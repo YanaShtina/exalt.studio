@@ -6,7 +6,6 @@
 $root-font-size: 100;
 $wide-desktop-width: 1920px;
 $desktop-width: 1440px;
-/* $middle-desktop-width: 1280px; */
 $low-desktop-width: 1024px;
 $tablet-width: 768px;
 $mobile-width: 360px;
@@ -63,6 +62,13 @@ body {
   max-width: rem(1440px);
   margin: 0 auto;
   padding: 0 rem(162px);
+
+
+  @media(max-width: 1325px) {
+    padding-right: rem(40px);
+    padding-left: rem(40px);
+  }
+
 
   @include tablet {
     padding: 0 rem(40px);

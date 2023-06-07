@@ -1,8 +1,24 @@
-<div class="popup__bg _request"> 
+<div class="popup__bg request"> 
     <div class="popup">
+    <img src="../img/close.svg" class="close-popup">
         <div class="popup__content">
-            <img src="../img/arrow-down.svg" class="close-popup">
-            ТКТТазошваоимша
+
+            <div class="popup__form-title">Оставьте заявку 
+            на&nbsp;консультацию</div>
+
+            <form action="form__left">
+
+                <input class="form__left-input" type="text" placeholder="Имя">
+                <input class="form__left-input" type="text" placeholder="Телефон">
+                <div class="form__left-policy">
+                <input id="checkbox" class="checkbox" checked type="checkbox">
+                <label for="checkbox">
+                Согласие на обработку <a>Персональных данных</a>
+                </label>
+                </div>
+
+                <button class="form__left-btn">Оставить заявку</button>
+            </form>
         </div>
     </div>
 </div>  
