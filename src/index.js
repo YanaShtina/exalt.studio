@@ -1,5 +1,22 @@
 import './index.scss';
-import test  from './modules/scrollTo';
+import scroll  from './modules/scrollTo';
+import burger  from './modules/burger';
+import popup  from './modules/popup';
 
 
-test.test();
+scroll.scroll();
+burger.init();
+popup.init();
+
+
+/* import loginButton from './modules/login-button';
+
+
+documentReady(() => {
+  resize.init();
+
+});
+
+documentLoaded(() => {
+
+}); */
