@@ -82,5 +82,11 @@ $b: '.hero';
     font-weight: 600;
     font-size: rem(16px);
     line-height: rem(20px);
+    transition: background-color 0.3s ease-in ;
+
+    &:hover {
+      background: linear-gradient(272.33deg, #6DBE7F 3.38%, #2A5964 100%);
+      transition: all 0.5s ease-in ;
+    }
   }
 }
