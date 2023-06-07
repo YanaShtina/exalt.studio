@@ -76,7 +76,8 @@ body {
   }
 
   @include mobile {
-    padding: 0 rem(15px);
+    padding-left: rem(15px) !important;
+    padding-right: rem(15px) !important;
     max-width: rem(767px);
   }
 }

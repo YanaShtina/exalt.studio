@@ -21,9 +21,12 @@ $b: '.hero';
   &__container {
     display: flex;
     align-items: flex-start;
-    justify-content: flex-start;
+    justify-content: space-between;
     padding-top: rem(185px);
     padding-bottom: rem(205px);
+    max-width: rem(1400px);
+    margin-left: auto;
+    margin-right: auto;
 
     @include tablet {
       padding-top: rem(70px);
@@ -43,8 +46,8 @@ $b: '.hero';
   }
 
   &__right {
-    width: rem(435px);
-    height: rem(435px);
+    width: rem(505px);
+    height: rem(505px);
 
     @include tablet {
       width: rem(335px);

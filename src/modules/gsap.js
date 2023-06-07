@@ -5,10 +5,22 @@ gsap.registerPlugin(ScrollTrigger);
 export default  {
   init() {
     // добавить проверку устройства
+
+    gsap.from('.hero__right', {
+      x: 43,
+      y: 20,
+      xPercent: 30,
+      yPercent: 30,
+      // repeat: -1,
+      opacity: 0,
+      duration: 1.5,
+      delay: 0.5,
+    })
+
     gsap.from('.hero__left', {
       x: -1000,
       opacity: 0,
-      duration: 2,
+      duration: 1.5,
       delay: 0.5,
     })
 
@@ -115,6 +127,17 @@ export default  {
       opacity:0,
       duration: 1.2,
       delay: 0.7,
+    })
+
+    gsap.from('.we__item', {
+      scrollTrigger: {
+        trigger: '.we',
+        start: '-750 0',
+        // scrub: true,
+        markers: true,
+      }, 
+     scale: 0,
+     duration: 1,
     })
   }
 }

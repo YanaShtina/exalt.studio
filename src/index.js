@@ -5,6 +5,7 @@ import popup  from './modules/popup';
 import accordeon  from './modules/accordeon';
 import gsap  from './modules/gsap';
 import numbers  from './modules/numbers';
+import slider  from './modules/slider';
 
 
 scroll.scroll();
@@ -13,6 +14,7 @@ popup.init();
 accordeon.init();
 gsap.init();
 numbers.init();
+slider.init();
 
 
 /* import loginButton from './modules/login-button';

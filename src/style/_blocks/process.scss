@@ -61,7 +61,7 @@ $b: '.process';
 
     &:nth-child(even) {
       img {
-        order: -1;
+        // order: -1;
 
         @include mobile {
           order: -1;
@@ -71,7 +71,7 @@ $b: '.process';
 
     &:nth-child(odd) {
       img {
-        order: 5;
+        // order: 5;
 
         @include mobile {
           order: -1;
