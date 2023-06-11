@@ -6,7 +6,7 @@
             <div class="popup__form-title">Оставьте заявку 
             на&nbsp;консультацию</div>
 
-            <form action="form__left">
+            <form class="form__left" action="<?php echo admin_url('admin-ajax.php?action=callback_mail') ?>" method="post">
 
                 <input class="form__left-input" type="text" placeholder="Имя">
                 <input class="form__left-input" type="text" placeholder="Телефон">

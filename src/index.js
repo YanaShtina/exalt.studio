@@ -7,6 +7,7 @@ import gsap  from './modules/gsap';
 import numbers  from './modules/numbers';
 import slider  from './modules/slider';
 import typet  from './modules/typet';
+import form  from './modules/form';
 
 
 scroll.scroll();
@@ -17,6 +18,7 @@ gsap.init();
 numbers.init();
 slider.init();
 typet.init();
+form.init();
 
 
 /* import loginButton from './modules/login-button';
