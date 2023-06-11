@@ -178,13 +178,16 @@ $b: '.tilda';
        }
     }
 
-    &-icon {
+    &::before {
+      content: '';
       position: absolute;
       top: rem(-35px);
       right: rem(-25px);
       object-fit: contain;
       width: rem(68px);
       height: rem(68px);
+      background-repeat: no-repeat;
+      background-size: contain;
 
       @include mobile {
         width: rem(48px);
@@ -192,6 +195,24 @@ $b: '.tilda';
         top: rem(-25px);
         right: rem(-10px);
        }
+    }
+
+    &._1 {
+      &::before {
+        background-image: url('../../img/price-1.svg');
+      }
+    }
+
+    &._2 {
+      &::before {
+        background-image: url('../../img/price-2.svg');
+      }
+    }
+
+    &._3 {
+      &::before {
+        background-image: url('../../img/price-3.svg');
+      }
     }
   }
 

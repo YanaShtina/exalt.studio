@@ -50,15 +50,16 @@ $b: '.advantages';
     &-title {
       font-family: $e-font-bold;
       font-weight: 700;
-      font-size: rem(20px);
+      font-size: rem(18px);
       line-height: rem(24px);
       color: #222;
       width: 100%;
       margin-bottom: rem(15px);
 
       @include tablet {
-        font-size: rem(20px);
+        font-size: rem(18px);
         line-height: rem(24px);
+        margin-bottom: rem(10px);
       }
     }
 

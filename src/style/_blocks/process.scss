@@ -20,6 +20,7 @@ $b: '.process';
   &__slider {
     padding-top: rem(20px);
     padding-bottom: rem(60px);
+    max-width: rem(1100px);
   }
 
   &__slider-wrap {
@@ -33,13 +34,18 @@ $b: '.process';
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     row-gap: rem(100px);
-    column-gap: rem(40px);
+    column-gap: rem(30px);
+    justify-items: center;
 
     @include tablet {
       grid-template-columns: repeat(1, 1fr);
       row-gap: rem(40px);
       column-gap: 0;
     }
+
+/*     @include mobile {
+      justify-items: start;
+    } */
 
     &.hidden {
       opacity: 0;
@@ -61,6 +67,15 @@ $b: '.process';
 
   &__item {
     display: flex;
+    max-width: rem(450px);
+
+    &:nth-child(3),
+    &:nth-child(4) {
+      .img{
+        order: -1;
+        margin-right: rem(10px);
+      }
+    }
 
     @include tablet {
       justify-content: center;
@@ -111,17 +126,17 @@ $b: '.process';
       font-size: rem(60px);
       line-height: rem(73px);
       color: #3D8A65;
-      left: rem(10px);
+      left: rem(-10px);
 
       @include tablet {
         font-size: rem(55px);
         line-height: rem(66px);
-        left: rem(30px);
+        left: rem(0px);
         top: rem(-50px);
       }
 
       @include mobile {
-        top: rem(-240px);
+        top: rem(-330px);
         left: rem(20px);
       }
     }
@@ -162,9 +177,14 @@ $b: '.process';
     }
 
     img {
+
+      width: rem(240px);
+      height: rem(180px);
+      object-fit: cover;
+
       @include mobile {
         width: 100%;
-        max-height: rem(160px);
+        height: rem(280px);
         object-fit: cover;
         margin-bottom: rem(15px);
       }

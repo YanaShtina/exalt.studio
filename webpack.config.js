@@ -33,7 +33,7 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     clean: true,
     filename: '[name].[contenthash].js',
-    assetModuleFilename: 'assets/[name][ext]',
+    assetModuleFilename: 'img/[name][ext]',
   },
   resolve: {
     extensions: ['.Webpack.js', '.web.js', '.ts', '.js', '.tsx']
@@ -51,7 +51,7 @@ module.exports = {
       patterns: [
         {
           from: 'src/img',
-          to: 'assets',
+          to: 'img',
           noErrorOnMissing: true,
         },
       ],
@@ -113,9 +113,10 @@ module.exports = {
       },
       {
         test: /\.(jpg|jpg|png|webp|gif|svg)$/i,
-        use: devMode
+        use: 
+     /*     devMode 
           ? []
-          : [
+          : [  */
               {
                 loader: 'image-webpack-loader',
                 options: {
@@ -137,7 +138,7 @@ module.exports = {
                   },
                 },
               },
-            ],
+     /*     ],  */
         type: 'asset/resource',
       },
       {

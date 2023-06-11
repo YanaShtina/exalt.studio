@@ -3,7 +3,7 @@ import Swiper, { Pagination } from 'swiper';
 export default {
   init() {
     const breakpoint = window.matchMedia( '(max-width: 1023px)' );
-    console.log('breakpoint', breakpoint.matches)
+/*     console.log('breakpoint', breakpoint.matches) */
     const swiper = new Swiper('.swiper', {
       // configure Swiper to use modules
       modules: [Pagination],

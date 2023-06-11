@@ -2,6 +2,8 @@ export default {
   init() {
     const numbers = document.querySelectorAll('.numbers__item-number');
     const number = document.querySelector('.numbers__item-number');
+
+    if (!number) return;
     const numberTop = number.getBoundingClientRect().top;
   
     numbers.forEach((n) => {

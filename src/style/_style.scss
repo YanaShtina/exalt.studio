@@ -7,7 +7,7 @@ $root-font-size: 100;
 $wide-desktop-width: 1920px;
 $desktop-width: 1440px;
 $low-desktop-width: 1024px;
-$tablet-width: 768px;
+$tablet-width: 745px;
 $mobile-width: 360px;
 
 html {
@@ -27,7 +27,7 @@ html {
   @include mobile {
     $min-screen-width: 300;
     $mid-screen-width: 360;
-    $max-screen-width: 767;
+    $max-screen-width: 600;
 
     @include css-lock-full(#{calc($min-screen-width * $root-font-size / $mid-screen-width)}, $root-font-size, #{calc($max-screen-width * $root-font-size / $mid-screen-width)}, $min-screen-width, $mid-screen-width, $max-screen-width);
   }

@@ -17,6 +17,9 @@ $b: '.hero';
     left: 0;
     right: 0;
     z-index: -10;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
   }
 
   &__overlay {
@@ -40,12 +43,12 @@ $b: '.hero';
     margin-right: auto;
 
     @include tablet {
-      padding-top: rem(70px);
+      padding-top: rem(150px);
       padding-bottom: rem(100px);
     }
 
     @include mobile {
-      padding-top: rem(70px);
+      padding-top: rem(120px);
       padding-bottom: rem(70px);
     }
   }
