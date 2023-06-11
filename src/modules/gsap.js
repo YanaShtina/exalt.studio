@@ -14,14 +14,14 @@ export default  {
       // repeat: -1,
       opacity: 0,
       duration: 1.5,
-      delay: 0.5,
+      delay: 0.2,
     })
 
     gsap.from('.hero__left', {
       x: -1000,
       opacity: 0,
       duration: 1.5,
-      delay: 0.5,
+      delay: 0.2,
     })
 
     gsap.from('.advantages__list', {

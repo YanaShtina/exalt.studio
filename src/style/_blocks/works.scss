@@ -37,6 +37,10 @@ $b: '.works';
       margin-bottom: 0;
     }
 
+    &-info {
+      min-width: 30%;
+    }
+
     &-img {
       width: 50%;
       width: rem(600px);
@@ -76,6 +80,7 @@ $b: '.works';
         font-family: $e-font-medium;
         max-width: rem(300px);
         margin-bottom: rem(32px);
+        color: white;
       }
     }
 
@@ -140,8 +145,8 @@ $b: '.works';
         height: rem(250px);
       }
     }
-
-    &._left {
+    
+    &:nth-child(odd) {
       .works__item-info {
         margin-left: rem(92px);
         padding-right: rem(50px);
@@ -170,7 +175,7 @@ $b: '.works';
       }
     }
 
-    &._rigth {
+    &:nth-child(even) {
       .works__item-info {
         padding-left: rem(50px);
         margin-right: rem(92px);
