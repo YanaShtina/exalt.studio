@@ -75,6 +75,14 @@ $b: '.process';
         order: -1;
         margin-right: rem(10px);
       }
+
+      .number {
+        left: rem(10px);
+
+        @include tablet {
+          left: rem(20px);
+        }
+      }
     }
 
     @include tablet {

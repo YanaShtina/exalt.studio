@@ -71,13 +71,14 @@ $b: '.works';
       max-width: rem(260px);
 
       @include tablet {
+        font-family: $e-font-regular;
+        font-size: rem(16px);
+        line-height: rem(24px);
         margin-bottom: rem(20px);
       }
 
       @include mobile {
         text-align: center;
-        font-size: rem(18px);
-        font-family: $e-font-medium;
         max-width: rem(300px);
         margin-bottom: rem(32px);
         color: white;

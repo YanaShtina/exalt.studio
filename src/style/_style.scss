@@ -125,9 +125,15 @@ body {
   line-height: rem(40px);
   margin-bottom: rem(80px);
   text-align: center;
+  margin-right: auto;
+  margin-left: auto;
 
   @include tablet {
-    margin-bottom: rem(60px);
+    font-family: $e-font-semiBold;
+    margin-bottom: rem(30px);
+    font-size: rem(28px);
+    line-height: rem(32px);
+    max-width: rem(250px);
   }
 }
 
@@ -138,6 +144,12 @@ body {
   line-height: rem(24px);
   color: #222;
   width: 100%;
+
+  @include tablet {
+    font-family: $e-font-regular;
+    font-size: rem(16px);
+  line-height: rem(24px);
+  }
 }
 
 .title-green {

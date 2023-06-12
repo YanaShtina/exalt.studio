@@ -13,7 +13,9 @@ export default {
       typeSpeed: 50, 
       startDelay: 50, 
       backSpeed: 50, 
-      loop: false 
+      loop: false,
+      startDelay: 1200,
+      showCursor: false,
   });
   }
 }

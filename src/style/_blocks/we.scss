@@ -2,6 +2,7 @@ $b: '.we';
 
 #{$b} {
   background-image: url('../../img/why-we-bg.png');
+  background-size: cover;
   margin-bottom: rem(120px);
 
   @include tablet {
@@ -48,7 +49,7 @@ $b: '.we';
 
   &__list {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
 
     @include tablet {
       flex-wrap: wrap;
@@ -91,7 +92,7 @@ $b: '.we';
 
     &-title {
       font-family: $e-font-bold;
-      font-size: rem(24px);
+      font-size: rem(22px);
       line-height: rem(29px);
       margin-bottom: rem(20px);
     }
@@ -100,6 +101,7 @@ $b: '.we';
       font-family: $e-font-regular;
       font-size: rem(14px);
       line-height: rem(17px);
+      width: 85%;
 
       @include tablet {
         width: 80%;

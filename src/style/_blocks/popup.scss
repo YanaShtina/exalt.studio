@@ -44,6 +44,7 @@
   top: rem(20px);
   right: rem(20px);
   cursor: pointer;
+  z-index: 100;
 }
 
 
@@ -101,17 +102,43 @@
     .popup {
       width: rem(750px);
       max-height: rem(900px);
-      overflow-y: scroll;
+      overflow-y: auto;
+      -webkit-overflow-scrolling: touch;
+    
+      &::-webkit-scrollbar {
+        width: 0;
+        display: none;
+      }
+      &__content {
+        overflow-y: scroll;
+        -webkit-overflow-scrolling: touch;
+
+      
+        &::-webkit-scrollbar {
+          width: 0;
+          display: none;
+        }
+  
+
+        @include mobile {
+          width: rem(300px);
+          height: 100%;
+          overflow-y: auto;
+          -webkit-overflow-scrolling: touch;
+        }
+      }
 
       @include tablet {
         width: rem(500px);
+        height: rem(500px);
         padding: rem(25px);
         height: rem(600px);
       }
 
       @include mobile {
         width: rem(300px);
-        padding: rem(15px);
+        height: rem(500px);
+        padding: rem(25px) rem(15px);
       }
 
       &__title {

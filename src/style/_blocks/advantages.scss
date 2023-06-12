@@ -6,6 +6,12 @@ $b: '.advantages';
   @include mobile {
     margin-bottom: rem(70px);
   }
+
+  &__title {
+    @include tablet {
+      margin-bottom: rem(20px);
+    }
+  }
   
   &__list {
     display: grid;
@@ -24,11 +30,11 @@ $b: '.advantages';
     padding-left: rem(100px);
 
     @include tablet {
-      padding-left: rem(100px);
+      padding-left: rem(70px);
     }
 
     @include mobile {
-      padding-left: rem(80px);
+      padding-left: rem(70px);
     }
 
     &:last-child {
@@ -45,6 +51,10 @@ $b: '.advantages';
         width: rem(45px);
         height: rem(45px);
       }
+
+      svg {
+        width: 100%;
+      }
     }
 
     &-title {
@@ -57,9 +67,10 @@ $b: '.advantages';
       margin-bottom: rem(15px);
 
       @include tablet {
-        font-size: rem(18px);
+        font-family: $e-font-semiBold;
+        font-size: rem(16px);
         line-height: rem(24px);
-        margin-bottom: rem(10px);
+        margin-bottom: rem(8px);
       }
     }
 
@@ -72,6 +83,7 @@ $b: '.advantages';
 
       @include mobile {
         width: rem(250px);
+        font-size: rem(12px);
       }
     }
   }

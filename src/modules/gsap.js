@@ -5,17 +5,30 @@ gsap.registerPlugin(ScrollTrigger);
 export default  {
   init() {
     // добавить проверку устройства
+    const imgC = document.querySelector('.hero__right');
 
-    var tl = gsap.timeline(
+    const tl = gsap.timeline(
       {
-      repeat: 4, 
+      repeat: 2, 
      /*  repeatDelay: 1 */
       });
-    tl.to(".hero__right", {opacity: 0.8, x: 100, duration: 2});
-    tl.to(".hero__right", {x: 50, y: 50, duration: 2});
-    tl.to(".hero__right", {yPercent: 5, duration: 2});
-    tl.to(".hero__right", {x: -30, y: 0, duration: 2});
-    tl.to(".hero__right", {x: 0, y: 0, duration: 2});
+    tl.to(imgC, {opacity: 0.8, x: 100, duration: 2});
+    tl.to(imgC, {x: 50, y: 50, duration: 2});
+    tl.to(imgC, {yPercent: 5, duration: 2});
+    tl.to(imgC, {x: -30, y: 0, duration: 2});
+    tl.to(imgC, {x: 0, y: 0, duration: 2});
+
+    imgC.addEventListener('mousemove', (e) => {
+      console.log('mousemover', e.clientY, e.clientX)
+      gsap.to(imgC, {
+        duration: 0.5,
+        overwrite: "auto",
+        x: e.clientX/7,
+        y: e.clientY/8,
+        stagger: 0.15,
+        ease: "none"
+      });
+    })
 
 
 /*     gsap.from('.hero__right', {
@@ -85,7 +98,7 @@ export default  {
       x: -100,
       opacity: 0,
       duration: 1.2,
-      delay: 1.2,
+      delay: 1.5,
     })
 
 
@@ -99,7 +112,7 @@ export default  {
       x: 100,
       opacity: 0,
       duration: 1.2,
-      delay: 1.5,
+      delay: 2,
     })
 
     gsap.from('.tilda__item._1', {

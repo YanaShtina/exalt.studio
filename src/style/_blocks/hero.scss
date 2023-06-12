@@ -57,11 +57,15 @@ $b: '.hero';
     max-width: rem(560px);
     position: relative;
     z-index: 5;
+    min-height: rem(350px);
   }
 
   &__right {
-    width: rem(505px);
-    height: rem(505px);
+    width: rem(450px);
+    height: rem(450px);
+    position: relative;
+    top: rem(-50px);
+    left: rem(-150px);
 
     @include tablet {
       width: rem(335px);
@@ -97,6 +101,9 @@ $b: '.hero';
     font-size: rem(16px);
     line-height: rem(20px);
     transition: background-color 0.3s ease-in ;
+    position: absolute;
+    bottom: rem(-50px);
+    left: 0;
 
     &:hover {
       background: linear-gradient(272.33deg, #6DBE7F 3.38%, #2A5964 100%);
