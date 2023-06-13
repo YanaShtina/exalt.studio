@@ -8,6 +8,7 @@ import numbers  from './modules/numbers';
 import slider  from './modules/slider';
 import typet  from './modules/typet';
 import form  from './modules/form';
+import works  from './modules/works';
 
 
 scroll.scroll();
@@ -19,6 +20,7 @@ numbers.init();
 slider.init();
 typet.init();
 form.init();
+works.init();
 
 
 /* import loginButton from './modules/login-button';

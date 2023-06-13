@@ -84,6 +84,11 @@ $b: '.we';
       height: rem(75px);
       margin-bottom: rem(20px);
 
+      img {
+        width: 100%;
+        height: 100%;
+      }
+
       svg {
         width: 100%;
         height: 100%;

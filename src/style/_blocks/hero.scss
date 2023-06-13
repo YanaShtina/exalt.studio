@@ -71,15 +71,16 @@ $b: '.hero';
       width: rem(335px);
       height: rem(335px);
       position: absolute;
-      right: rem(40px);
-      top: rem(140px);
+      right: rem(80px);
+      top: rem(120px);
+      left: initial;
     }
 
     @include mobile {
       width: rem(235px);
       height: rem(235px);
-      right: rem(10px);
-      top: rem(240px);
+      right: rem(60px);
+      top: rem(230px);
     }
 
     img {
