@@ -32,7 +32,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'dist'),
     clean: true,
-    filename: '[name].[contenthash].js',
+    filename: '[name].js',
     assetModuleFilename: 'img/[name][ext]',
   },
   resolve: {
@@ -45,7 +45,7 @@ module.exports = {
       template: 'nunjucks-html-loader!./src/templates/index.njk',
     }), 
     new MiniCssExtractPlugin({
-      filename: '[name].[contenthash].css',
+      filename: '[name].css',
     }),
     new CopyPlugin({
       patterns: [
